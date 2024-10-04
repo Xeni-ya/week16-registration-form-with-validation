@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Форма регистрации с валидацией всех полей</title>
+</head>
+<body>
+  <!-- 1. Создайте HTML-страницу с формой для регистрации пользователя, содержащую следующие поля:
+
+  Поле ввода имени: обязательное поле, должно содержать только буквы и пробелы. Длина имени должна быть от 2 до 20 символов. Должно иметь атрибуты placeholder и required.
+  Поле ввода электронной почты: обязательное поле, должно быть в формате email (содержать символ '@' и доменное имя). Должно иметь атрибуты placeholder и required.
+  Поле ввода возраста: обязательное поле. Должно иметь атрибуты placeholder и required.
+  Поле выбора пола: представленное в виде radio buttons для выбора между мужчиной и женщиной
+  Поле выбора профессии: обязательное поле, представленное в виде выпадающего списка (select). Должно иметь атрибуты required и placeholder для выбора профессии. Варианты профессий: Врач, Программист, Учитель, Дизайнер, Инженер, Продавец, Другое.
+  Поле ввода пароля: обязательное поле, должно быть не менее 8 символов длиной и содержать как минимум одну заглавную букву, одну строчную букву и одну цифру. Должно иметь атрибуты placeholder, required, minlength и pattern.
+  Поле checkbox, показывающее согласие пользователя с обработкой данных. Должно иметь атрибут required.
+  Кнопка отправки формы -->
+
+  <main class="main">
+    <section class="section-container">
+      <form action="" method="post" class="form">
+        <input type="text" placeholder="Введите ваше имя" id="" name="" required>
+        <br>
+        <input type="mail" placeholder="Введите ваш email" id="" name="" required>
+        <br>
+        <input type="number" placeholder="Введите ваш возраст" id="" name="" required>
+        <br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Мужчина</label>
+        <br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Женщина</label>
+        <br>
+        <select placeholder="Ваша профессия" id="" name="" required>
+          <option value="" disabled selected>Выберите профессию</option>
+          <option value="doctor">Врач</option>
+          <option value="programmer">Программист</option>
+          <option value="teacher">Учитель</option>
+          <option value="designer">Дизайнер</option>
+          <option value="engineer">Инженер</option>
+          <option value="salesperson">Продавец</option>
+          <option value="other">Другое</option>
+        </select>
+        <br>
+        <input type="password" placeholder="Введите пароль" required minlength="8" pattern="" id="" name="">
+        <br>
+        <input type="checkbox" id="" name="" required>
+        <label for="agree">Я согласен с обработкой моих данных</label>
+        <br>
+        <input type="submit">
+      </form>
+    </section>
+  </main>
+</body>
+</html>

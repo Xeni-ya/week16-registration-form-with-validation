@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/style/style.css">
   <title>Форма регистрации с валидацией всех полей</title>
 </head>
 <body>
@@ -19,20 +20,29 @@
 
   <main class="main">
     <section class="section-container">
-      <form action="" method="post" class="form">
-        <input type="text" placeholder="Введите ваше имя" id="" name="" required>
+      <form action="index.html" method="post" class="form">
+        <h1 class="title">Регистрация</h1>
+        <label for="name">Имя:*</label><br>
+        <input type="text" placeholder="Введите ваше имя" id="name" name="name" required>
         <br>
-        <input type="mail" placeholder="Введите ваш email" id="" name="" required>
+
+        <label for="email">Email:*</label><br>
+        <input type="mail" placeholder="Введите ваш email" id="email" name="email" required>
         <br>
-        <input type="number" placeholder="Введите ваш возраст" id="" name="" required>
+
+        <label for="age">Возраст:*</label><br>
+        <input type="number" placeholder="Введите ваш возраст" id="age" name="age" required>
         <br>
-        <input type="radio" id="male" name="gender" value="male">
-        <label for="male">Мужчина</label>
-        <br>
-        <input type="radio" id="female" name="gender" value="female">
+
+        <label for="#">Пол:</label><br>
+        <input type="radio" id="male" name="gender">
+        <label for="male">Мужчина</label><br>
+        <input type="radio" id="female" name="gender">
         <label for="female">Женщина</label>
         <br>
-        <select placeholder="Ваша профессия" id="" name="" required>
+
+        <label for="profession">Профессия:*</label><br>
+        <select placeholder="Ваша профессия" id="profession" name="profession" required>
           <option value="" disabled selected>Выберите профессию</option>
           <option value="doctor">Врач</option>
           <option value="programmer">Программист</option>
@@ -43,12 +53,18 @@
           <option value="other">Другое</option>
         </select>
         <br>
-        <input type="password" placeholder="Введите пароль" required minlength="8" pattern="" id="" name="">
+
+        <label for="password">Пароль:*</label><br>
+        <input type="password" placeholder="Введите пароль" required minlength="8" pattern="password" id="password" name="password">
         <br>
-        <input type="checkbox" id="" name="" required>
-        <label for="agree">Я согласен с обработкой моих данных</label>
+
+        <input type="checkbox" id="policy" name="policy" required>
+        <label for="policy">Я согласен с обработкой персональных данных</label><br>
+        <a href="./assets/pages/privacy_policy.html" class="privacy-policy">Политика конфеденциальности</a>
         <br>
-        <input type="submit">
+
+        <button type="submit">Отправить</button>
+        <p>* — Обязательные поля</p>
       </form>
     </section>
   </main>

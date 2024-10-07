@@ -22,16 +22,17 @@
     <section class="section-container">
       <form action="index.html" method="post" class="form">
         <h1 class="title">Регистрация</h1>
-        <label for="name">Имя:*</label><br>
+        
+        <label for="name">Имя: *</label><br>
         <input type="text" placeholder="Введите ваше имя" id="name" name="name" required>
         <br>
 
-        <label for="email">Email:*</label><br>
+        <label for="email">Email: *</label><br>
         <input type="mail" placeholder="Введите ваш email" id="email" name="email" required>
         <br>
 
-        <label for="age">Возраст:*</label><br>
-        <input type="number" placeholder="Введите ваш возраст" id="age" name="age" required>
+        <label for="age">Возраст: *</label><br>
+        <input type="number" placeholder="Введите ваш возраст" id="age" name="age" min="14" max="110" required>
         <br>
 
         <label for="#">Пол:</label><br>
@@ -41,7 +42,7 @@
         <label for="female">Женщина</label>
         <br>
 
-        <label for="profession">Профессия:*</label><br>
+        <label for="profession">Профессия: *</label><br>
         <select placeholder="Ваша профессия" id="profession" name="profession" required>
           <option value="" disabled selected>Выберите профессию</option>
           <option value="doctor">Врач</option>
@@ -54,19 +55,21 @@
         </select>
         <br>
 
-        <label for="password">Пароль:*</label><br>
-        <input type="password" placeholder="Введите пароль" required minlength="8" pattern="password" id="password" name="password">
+        <label for="password">Пароль: *</label><br>
+        <input type="password" placeholder="Введите пароль" required minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).*" id="password" name="password">
         <br>
 
         <input type="checkbox" id="policy" name="policy" required>
         <label for="policy">Я согласен с обработкой персональных данных</label><br>
-        <a href="./assets/pages/privacy_policy.html" class="privacy-policy">Политика конфеденциальности</a>
+        <a href="./assets/pages/privacy_policy.html" class="privacy-policy">Политика конфиденциальности</a>
         <br>
 
-        <button type="submit">Отправить</button>
+        <button type="button" onclick="checkAll()">Отправить</button>
         <p>* — Обязательные поля</p>
+        <div class="errorsInfo"></div>
       </form>
     </section>
   </main>
+  <script src="./assets/script/script.js"></script>
 </body>
 </html>

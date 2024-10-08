@@ -12,10 +12,10 @@ let checkValidity = (input) => {
   if (validity.valueMissing) {
     errors.push(`Заполните пустое поле ${input.placeholder}`);
   } 
-  if (validity.patternMissmatch) {
+  if (validity.patternMismatch) {
     errors.push(`Неверный формат заполнения`);
   } 
-  if (validity.rangeOwerflow) {
+  if (validity.rangeOverflow) {
     let max = input.getAttributeValue(input, 'max');
     errors.push(`Максимальное значение не может быть больше чем ${max}`);
   }
@@ -28,6 +28,13 @@ let checkValidity = (input) => {
 let checkAll = () => {
   errors = [];
   let inputs = document.querySelectorAll('input, select');
+  
+  let form = document.querySelector('form');
+  form.addEventListener('button', (event) => {
+    if (errors.length > 0) {
+      event.preventDefault();
+    }
+  });
 
   for (let input of inputs) {
     checkValidity(input);

@@ -149,6 +149,16 @@ p {
 
 .form input[type="radio"] {
   opacity: 0.33; /* Делаем радиокнопки видимыми */
+}
 
+.errorsInfo {
+  color: rgba(255, 255, 255, .6);
+  text-transform: uppercase;
+}
+.errorsInfo span {
+  color: black;
+}
 
+input:required:valid {
+  border-color: yellowgreen;
 }
